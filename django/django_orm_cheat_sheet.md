@@ -450,6 +450,19 @@ SELECT * FROM entry
 WHERE (headline LIKE 'Who%' OR headline LIKE 'What%');
 ```
 
+#### Using the NOT (~) Operator with Q Objects
+```sql
+from django.db.models import Q
+# This query retrieves all Entry objects whose headline does NOT start with "Who"
+entries = Entry.objects.filter(~Q(headline__startswith="Who"))
+```
+
+#### SQL Equivalent:
+```sql
+SELECT * FROM entry
+WHERE NOT (headline LIKE 'Who%');
+```
+
 - **When to Use**: When conditions are too complex for simple keyword arguments.
 
 ---
