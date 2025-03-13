@@ -1,0 +1,27 @@
+## Answers
+- True.
+- False. (NumPy slicing returns a view, not a copy, by default.)
+- True.
+- False. (All elements of a NumPy array must be of the same data type.)
+- True.
+
+- a. `np.array([1, 2, 3])`
+- b. `20`
+- a. `[2, 3, 4]`
+- a. `arr.size`
+- a. `(2, 3)`
+- a. `[5, 7, 9]`
+- a, b, d.
+- b, d, e.
+Broadcasting allows NumPy (or similar libraries) to perform operations on arrays of different shapes, 
+as long as certain rules are met. 
+The key rule is that starting from the trailing dimensions, the sizes of the arrays must either be equal or one of them must be 1.
+
+- a, b, c, e.
+
+- `(0, 10, 2)` – e.g. `even_arr = np.arange(0, 10, 2)`.
+- `(2, 3)` – e.g. `arr2d = arr.reshape(2, 3)`.
+- `a * b` – using `*` performs element-wise multiplication.
+- `>` – e.g. `mask = arr > 5`.
+- Use brackets to pass a list: `arr = np.array([1, 2, 3])`.
+- Call the function with a tuple shape: `ones_arr = np.ones((2, 3))`.
