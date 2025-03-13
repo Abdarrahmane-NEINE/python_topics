@@ -221,6 +221,25 @@ def get_person_detail(request, person_id):
    True
    False
 - **Correct Answer:** True
+```python
+from django.core.paginator import Paginator
+from myapp.models import MyModel
+
+# Assume you have a QuerySet of objects
+object_list = MyModel.objects.all()
+
+# Create a Paginator object with 10 items per page
+paginator = Paginator(object_list, 10)
+
+# Get the first page
+page_number = 1
+page_obj = paginator.get_page(page_number)
+
+# Iterate over the objects on the current page
+for item in page_obj:
+    print(item)
+```
+
 
 ### 22. (Single Choice) Which manage.py command creates new migration files based on model changes?
 - a. python manage.py makemigrations
