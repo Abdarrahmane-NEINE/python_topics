@@ -153,8 +153,7 @@ You have a list of tuples: `items = [(1, 'a'), (3, 'c'), (2, 'b')]`. How would y
 ---
 
 ### 9. Code Completion:
-Fill in the blank to sort the list `words` by the length of each word, from shortest to longest.
-
+Fill in the blank to sort the list words by the last character of each word, in alphabetical order.
 ```python
 words = ["apple", "banana", "cherry", "date"]
 sorted_words = sorted(words, key=__________)
@@ -164,7 +163,7 @@ print(sorted_words)
 **Answer:**
 
 ```python
-sorted_words = sorted(words, key=len)
+sorted_words = sorted(words, key=lambda word: word[-1])
 ```
 
 **Explanation:** The built-in function `len` can be used as the `key` function to sort by length. This will produce `['date', 'apple', 'banana', 'cherry']` because "date" (4 letters) is shortest, followed by "apple" (5), "banana" (6), and "cherry" (6).
